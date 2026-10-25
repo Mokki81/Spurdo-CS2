@@ -1,0 +1,9 @@
+SPURDO CS2 External
+===================
+1. pip install pymem
+2. python Spurdo.py  (as Administrator)
+   OR if halves present: python Spurdo.py merges Spurdo_half1.py + Spurdo_half2.py
+3. CS2 in Borderless Windowed
+4. Insert / Home = menu
+
+Repo: https://github.com/Mokki81/Spurdo-CS2
