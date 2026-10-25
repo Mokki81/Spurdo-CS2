@@ -1,6 +1,6 @@
 # Spurdo CS2 External xDDD
 
-External overlay cheat for Counter-Strike 2 inspired by Spurdo.
+External overlay for Counter-Strike 2 (Spurdo-style).
 
 ## Features
 
@@ -13,12 +13,11 @@ External overlay cheat for Counter-Strike 2 inspired by Spurdo.
 - Box (corner / full) + Skeleton
 - HP bar (gradient + number), Armor bar
 - Name, Weapon, Weapon icon
-- Scoped / Defusing / Flashed flags
+- Scoped / Defusing / Flashed
 - Off-screen arrows
-- Visible only filter
 
 ### NADES
-- Flight trajectory prediction
+- Flight trajectory
 - Smoke / Molly / HE radii
 
 ### MISC / OTHER
@@ -29,16 +28,19 @@ External overlay cheat for Counter-Strike 2 inspired by Spurdo.
 ## Run
 
 ```bash
-# Windows, Python 3.10+
 pip install pymem
-# Run as Administrator
+# Windows: run as Administrator
 python Spurdo.py
 ```
 
 - CS2: **Borderless / Windowed fullscreen**
 - Menu: **Insert** or **Home**
-- Offsets: cs2-dumper **2026-10-23**
+- Offsets: **cs2-dumper 2026-10-23**
+
+## Full source
+
+The complete script is provided in the project chat as `Spurdo.py` (download the file from the conversation). Place it in this folder and run as admin.
 
 ## Disclaimer
 
-For educational purposes only. Using cheats in online games violates terms of service and may result in bans.
+Educational use only. Cheating violates game ToS and can get you banned.
